@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>You Tube lazy loading</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!-- https://github.com/vb/lazyframe -->
+  <link rel="stylesheet" href="lazyframe.css">
+</head>
+<body>
+	<p>Youtube video with custom thumbnail and title</p>
+  <div
+    class="lazyframe"
+    data-src="https://www.youtube.com/embed/videoseries?list=PLTUAoPcp3g6GcwTlz9Qcaw4WcgnQpIgm3"
+    data-vendor="youtube"
+    data-title="Sweet Jonny - Live At The Lab"
+    data-thumbnail="https://img.youtube.com/vi/tZgjknJwlgM/sddefault.jpg">
+  </div>
+
+  <section id="music">
+  <div class="container text-center">
+    <h3>DISCOGRAPHY</h3>
+  
+    <p>Sweet Jonny have released four EPs, one live LP and their debut studio album to date.</p>
+    
+    <!-- CARDS content -->
+
+    <div class="row justify-content-md-center m-0">
+    <!-- EP#4: "Live At The Lab" -->
+    <div class="card bg-1 col-md-6 my-1 mx-0 py-2 px-0">
+      <p><span>EP#4: 'Live At The Lab' (2019)</span></p>
+      <br>
+      <!-- <div
+        height="210"
+        class="lazyframe"
+        data-src="https://open.spotify.com/embed/album/3tp6rly8csHfL7WRBdOihR"
+        data-vendor=""
+        data-title="Sweet Jonny - Live At The Lab"
+        data-thumbnail="https://i.scdn.co/image/ab67616d0000b273e057b49da50769852b95fb67">
+      </div> -->
+      <iframe class="d-block mx-auto" loading="lazy" src="https://open.spotify.com/embed/album/3tp6rly8csHfL7WRBdOihR" width="90%" height="210" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+
+    <!-- LP#1: 'Sweet Jonny' (2018) -->
+    <div class="card bg-1 col-md-6 my-1 mx-0 py-2 px-0">
+      <p><span>LP#1: 'Sweet Jonny' (2018)</span></p>
+      <br>
+      <iframe class="d-block mx-auto" loading="lazy" src="https://open.spotify.com/embed/album/41kmimSxstuPKSRB4lBq68" width="90%" height="210" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+    </div>
+    </div>
+    <br>
+
+    <p>Listen more here 
+      <span class="social-icons ml-2"><a href="https://open.spotify.com/artist/0ZYQubU5LJ8rn9RAnrPS7r" target="_blank" data-toggle="tooltip" title="Spotify" data-placement="auto" style="vertical-align: top;" ><img height="32" width="32" src="fonts/spotify.svg" alt="Spotify logo"/></a></span>
+      <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:0ZYQubU5LJ8rn9RAnrPS7r&size=basic&theme=dark&show-count=0" width="100" height="30" scrolling="no" frameborder="0" style="border:none; overflow:hidden;vertical-align: top;" allowtransparency="true"></iframe>
+    </p>
+  </div>
+	</section>
+
+  <!-- https://github.com/vb/lazyframe -->
+  <script src="lazyframe.min.js"></script>
+  <script>
+    lazyframe('.lazyframe');
+  </script>
+</body>
+</html>
