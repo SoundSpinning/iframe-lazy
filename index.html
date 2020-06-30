@@ -5,17 +5,20 @@
 	<title>You Tube lazy loading</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <!-- https://github.com/vb/lazyframe -->
-  <link rel="stylesheet" href="lazyframe.css">
+  <!-- <link rel="stylesheet" href="lazyframe.css"> -->
 </head>
 <body>
 	<p>Youtube video with custom thumbnail and title</p>
-  <div
+  <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLTUAoPcp3g6GcwTlz9Qcaw4WcgnQpIgm3" allowfullscreen></iframe> -->
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLTUAoPcp3g6GcwTlz9Qcaw4WcgnQpIgm3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+  <!-- <div
     class="lazyframe"
     data-src="https://www.youtube.com/embed/videoseries?list=PLTUAoPcp3g6GcwTlz9Qcaw4WcgnQpIgm3"
     data-vendor="youtube"
     data-title="Sweet Jonny - Live At The Lab"
     data-thumbnail="https://img.youtube.com/vi/tZgjknJwlgM/sddefault.jpg">
-  </div>
+  </div> -->
 
   <section id="music">
   <div class="container text-center">
@@ -38,14 +41,15 @@
         data-title="Sweet Jonny - Live At The Lab"
         data-thumbnail="https://i.scdn.co/image/ab67616d0000b273e057b49da50769852b95fb67">
       </div> -->
-      <iframe class="d-block mx-auto" loading="lazy" src="https://open.spotify.com/embed/album/3tp6rly8csHfL7WRBdOihR" width="90%" height="210" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe class="d-block mx-auto" data-src="https://i.scdn.co/image/ab67616d00001e02e057b49da50769852b95fb67" src="https://open.spotify.com/embed/album/3tp6rly8csHfL7WRBdOihR" width="90%" height="210" frameborder="0" allowtransparency="true" allow="encrypted-media">
+      </iframe>
     </div>
 
     <!-- LP#1: 'Sweet Jonny' (2018) -->
     <div class="card bg-1 col-md-6 my-1 mx-0 py-2 px-0">
       <p><span>LP#1: 'Sweet Jonny' (2018)</span></p>
       <br>
-      <iframe class="d-block mx-auto" loading="lazy" src="https://open.spotify.com/embed/album/41kmimSxstuPKSRB4lBq68" width="90%" height="210" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
+      <iframe class="d-block mx-auto" src="https://open.spotify.com/embed/album/41kmimSxstuPKSRB4lBq68" width="90%" height="210" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
     </div>
     </div>
     <br>
@@ -58,9 +62,9 @@
 	</section>
 
   <!-- https://github.com/vb/lazyframe -->
-  <script src="lazyframe.min.js"></script>
+  <!-- <script src="lazyframe.min.js"></script>
   <script>
     lazyframe('.lazyframe');
-  </script>
+  </script> -->
 </body>
 </html>
