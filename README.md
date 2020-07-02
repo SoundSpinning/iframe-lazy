@@ -28,7 +28,8 @@
         onclick="this.remove()" 
         href="https://www.youtube.com/embed/videoseries?list=PLTUAoPcp3g6GcwTlz9Qcaw4WcgnQpIgm3&autoplay=1" 
         target="iframe-1">
-        <!-- SVG inline to allow interaction via CSS & <a> onclick -->
+        <!-- SVG inline to allow interaction via CSS & <a> onclick 
+             you can also use an <img> element, which is a one liner, less code -->
         <svg height="100%" width="100%" 
          <-- SGV content goes here, see full example in `index.html` -->
         </svg>
@@ -41,10 +42,18 @@ Add CSS as necessary to make button to work as you like, see example in `iframe-
 
 Comparison of performance with `lighthouse`:
 
-**Embed (no lazy loading)**:
+** [Embed (no lazy loading)](https://soundspinning.github.io/iframe-lazy/iframe-no-lazy-load.html) **:
 
 ![Embed](./iFrame-embed.jpg)
 
-**HTML & CSS lazy loading**:
+** [HTML & CSS lazy loading](https://soundspinning.github.io/iframe-lazy/) **:
 
 ![Lazy Loading](./iFrame-lazy-loading.jpg)
+
+## Notes
+
+- When comparing performance on the links above in lighthouse or other tool, make sure to clear browser cache before each test, for a fair comparison.
+- Images can be lazy loaded with the latest HTML addition: `loading="lazy"` in the `<img>` tag, which soon should be implemented in all modern browsers.
+- One drawback from this simple iframe loading implementation is that on mobile devices two taps will be required, due to `autoplay` policy rules.
+
+---
