@@ -1,5 +1,5 @@
 # `<iframe>` Lazy Loading without Javascript
-<iframe> lazy loading with only HTML & CSS
+<iframe> simple lazy loading with only HTML & CSS
 
 ## Method
 
@@ -40,20 +40,20 @@ Add CSS as necessary to make button to work as you like, see example in `iframe-
 
 ## Performance Results
 
-Comparison of performance with `lighthouse`:
+Comparison of performance with `lighthouse` for a page with one YouTube embed to a playlist, and two Spotify embeds to albums:
 
-** [Embed (no lazy loading)](https://soundspinning.github.io/iframe-lazy/iframe-no-lazy-load.html) **:
+**[Embed (no lazy loading)](https://soundspinning.github.io/iframe-lazy/iframe-no-lazy-load.html)**:
 
 ![Embed](./iFrame-embed.jpg)
 
-** [HTML & CSS lazy loading](https://soundspinning.github.io/iframe-lazy/) **:
+**[HTML & CSS lazy loading](https://soundspinning.github.io/iframe-lazy/)**:
 
 ![Lazy Loading](./iFrame-lazy-loading.jpg)
 
 ## Notes
 
-- When comparing performance on the links above in lighthouse or other tool, make sure to clear browser cache before each test, for a fair comparison.
-- Images can be lazy loaded with the latest HTML addition: `loading="lazy"` in the `<img>` tag, which soon should be implemented in all modern browsers.
-- One drawback from this simple iframe loading implementation is that on mobile devices two taps will be required, due to `autoplay` policy rules.
+- When comparing performance on the links above in lighthouse or another tool, make sure to clear the browser cache before each test, for a fair comparison.
+- Images can be lazy loaded with the latest HTML addition: `loading="lazy"` in the `<img>` tag, which (hopefully) soon should be implemented in all modern browsers.
+- One drawback from this simple iframe loading implementation is that on mobile devices two taps will be required to play the content, due to `autoplay` policy rules.
 
 ---
