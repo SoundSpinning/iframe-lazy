@@ -1,0 +1,59 @@
+body {
+	font-family: sans-serif;
+	font-size: 17px;
+}
+
+.if-wrap {
+	position: relative;
+	width: 560px;
+	height: 315px;
+	max-width: 95%;
+	max-height: 56.25vw;
+}
+
+.if-wrap * {
+	position: absolute;
+}
+
+.if-wrap a {
+	left: 50%;
+	top: 50%;
+	width: 80px;
+	height: 80px;
+	margin-left: -40px;
+	margin-top: -40px;
+	-moz-transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+	-webkit-transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+	transition: opacity .25s cubic-bezier(0.0,0.0,0.2,1);
+} 
+
+.if-wrap a:hover {
+	-moz-transition: transform 0.1s ease 0s;
+	-webkit-transition: transform 0.1s ease 0s;
+	transition: transform 0.1s ease 0s;
+	-moz-transform: scale(1.05);
+	-webkit-transform: scale(1.05);
+	transform: scale(1.05);
+}
+
+svg path {
+	-moz-transition: fill .1s cubic-bezier(0.4,0.0,1,1),fill-opacity .1s cubic-bezier(0.4,0.0,1,1);
+	-webkit-transition: fill .1s cubic-bezier(0.4,0.0,1,1),fill-opacity .1s cubic-bezier(0.4,0.0,1,1);
+	transition: fill .1s cubic-bezier(0.4,0.0,1,1),fill-opacity .1s cubic-bezier(0.4,0.0,1,1);
+	fill: rgb(87, 252, 16);
+	fill-opacity: 0.7;
+}
+
+.if-wrap a:hover * {
+	fill-opacity: 1;
+	font-weight: bold;
+}
+
+.if-wrap a:hover text {
+	font-weight: bold;
+}
+
+text {
+	fill: #cacaca;
+	font-size: 6.5rem;
+}

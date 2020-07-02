@@ -2,69 +2,128 @@
 <html>
 <head>
 	<meta charset="utf-8">
-	<title>You Tube lazy loading</title>
+	<title>iFrame Lazy Loading, no Javascript</title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <!-- https://github.com/vb/lazyframe -->
-  <!-- <link rel="stylesheet" href="lazyframe.css"> -->
+  <link rel="stylesheet" href="iframe-lazy.css">
 </head>
 <body>
-	<p>Youtube video with custom thumbnail and title</p>
-  <!-- <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/videoseries?list=PLTUAoPcp3g6GcwTlz9Qcaw4WcgnQpIgm3" allowfullscreen></iframe> -->
-  <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLTUAoPcp3g6GcwTlz9Qcaw4WcgnQpIgm3" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
-  <!-- <div
-    class="lazyframe"
-    data-src="https://www.youtube.com/embed/videoseries?list=PLTUAoPcp3g6GcwTlz9Qcaw4WcgnQpIgm3"
-    data-vendor="youtube"
-    data-title="Sweet Jonny - Live At The Lab"
-    data-thumbnail="https://img.youtube.com/vi/tZgjknJwlgM/sddefault.jpg">
-  </div> -->
+	<section id="videos">
+    <h1>Youtube video embed</h1>
+    <div class="if-wrap">
+      <iframe  
+        width="100%" height="100%" 
+        title="Sweet Jonny Videos" 
+        name="iframe-1" 
+        frameborder="0" allowfullscreen 
+        allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" 
+        style="
+        background-image:url('https://i.ytimg.com/vi_webp/tZgjknJwlgM/hqdefault.webp'); 
+        background-repeat: no-repeat; background-size: contain; background-position: center;
+        ">
+      </iframe>
+      <a title="Load Videos" 
+        onclick="this.remove()" 
+        href="https://www.youtube.com/embed/videoseries?list=PLTUAoPcp3g6GcwTlz9Qcaw4WcgnQpIgm3&autoplay=1" 
+        target="iframe-1">
+        <!-- SVG inline to allow interaction via CSS & <a> onclick -->
+        <svg height="100%" width="100%" 
+        version="2.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495.545 495.545" x="0px" y="0px">
+          <path d="M268.234,20.467c-71.09,0-134.609,32.862-176.322,84.133c8.916,3.007,16.471,9.265,20.784,18.036
+          l26.005,52.576c25.484-45.305,73.959-76.027,129.533-76.027c81.937,0,148.601,66.647,148.601,148.583
+          c0,81.944-66.664,148.593-148.601,148.593c-72.776,0-133.376-52.624-146.021-121.801l31.078,20.954
+          c1.767,1.184,4.087,1.03,5.691-0.357c1.588-1.394,2.059-3.689,1.135-5.593c-51.83-104.772,0.338,0.706-75.646-152.969
+          c-0.779-1.589-2.399-2.602-4.185-2.602c-1.782,0-3.402,1.013-4.164,2.602c-3.615,7.288-59.938,121.226-75.631,152.969
+          c-0.956,1.904-0.486,4.199,1.119,5.593c1.589,1.386,3.906,1.541,5.674,0.357l34.969-23.565
+          c12.129,114.003,108.799,203.13,225.98,203.13c125.352,0,227.311-101.966,227.311-227.31
+          C495.545,122.433,393.586,20.467,268.234,20.467z"/>
+          <text x="30%" y="55%">Load</text>
+        </svg>
+      </a>
+    </div>
+  </section>
 
   <section id="music">
-  <div class="container text-center">
+    <h1>Spotify player embed</h1>
     <h3>DISCOGRAPHY</h3>
   
     <p>Sweet Jonny have released four EPs, one live LP and their debut studio album to date.</p>
     
     <!-- CARDS content -->
-
-    <div class="row justify-content-md-center m-0">
     <!-- EP#4: "Live At The Lab" -->
-    <div class="card bg-1 col-md-6 my-1 mx-0 py-2 px-0">
+    <div class="cards">
       <p><span>EP#4: 'Live At The Lab' (2019)</span></p>
-      <br>
-      <!-- <div
-        height="210"
-        class="lazyframe"
-        data-src="https://open.spotify.com/embed/album/3tp6rly8csHfL7WRBdOihR"
-        data-vendor=""
-        data-title="Sweet Jonny - Live At The Lab"
-        data-thumbnail="https://i.scdn.co/image/ab67616d0000b273e057b49da50769852b95fb67">
-      </div> -->
-      <iframe class="d-block mx-auto" data-src="https://i.scdn.co/image/ab67616d00001e02e057b49da50769852b95fb67" src="https://open.spotify.com/embed/album/3tp6rly8csHfL7WRBdOihR" width="90%" height="210" frameborder="0" allowtransparency="true" allow="encrypted-media">
-      </iframe>
-    </div>
+      <div class="if-wrap">
+        <iframe  
+          width="100%" height="100%" 
+          title="Sweet Jonny EP#4: 'Live At The Lab'" 
+          name="iframe-2" 
+          frameborder="0" allowfullscreen 
+          allow="encrypted-media" allowtransparency="true" 
+          style="
+          background-image:url('https://i.scdn.co/image/ab67616d0000b2739aff8381d690d1a4973c1eab'); 
+          background-repeat: no-repeat; background-size: contain; background-position: center;
+        ">
+        </iframe>
+        <a title="Load Tracks" 
+          onclick="this.remove()" 
+          href="https://open.spotify.com/embed/album/3tp6rly8csHfL7WRBdOihR" 
+          target="iframe-2">
+          <!-- SVG inline to allow interaction via CSS & <a> onclick -->
+          <svg height="100%" width="100%" 
+          version="2.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495.545 495.545" x="0px" y="0px">
+            <path d="M268.234,20.467c-71.09,0-134.609,32.862-176.322,84.133c8.916,3.007,16.471,9.265,20.784,18.036
+            l26.005,52.576c25.484-45.305,73.959-76.027,129.533-76.027c81.937,0,148.601,66.647,148.601,148.583
+            c0,81.944-66.664,148.593-148.601,148.593c-72.776,0-133.376-52.624-146.021-121.801l31.078,20.954
+            c1.767,1.184,4.087,1.03,5.691-0.357c1.588-1.394,2.059-3.689,1.135-5.593c-51.83-104.772,0.338,0.706-75.646-152.969
+            c-0.779-1.589-2.399-2.602-4.185-2.602c-1.782,0-3.402,1.013-4.164,2.602c-3.615,7.288-59.938,121.226-75.631,152.969
+            c-0.956,1.904-0.486,4.199,1.119,5.593c1.589,1.386,3.906,1.541,5.674,0.357l34.969-23.565
+            c12.129,114.003,108.799,203.13,225.98,203.13c125.352,0,227.311-101.966,227.311-227.31
+            C495.545,122.433,393.586,20.467,268.234,20.467z"/>
+            <text x="30%" y="55%">Load</text>
+          </svg>
+        </a>
+      </div>
 
     <!-- LP#1: 'Sweet Jonny' (2018) -->
-    <div class="card bg-1 col-md-6 my-1 mx-0 py-2 px-0">
       <p><span>LP#1: 'Sweet Jonny' (2018)</span></p>
-      <br>
-      <iframe class="d-block mx-auto" src="https://open.spotify.com/embed/album/41kmimSxstuPKSRB4lBq68" width="90%" height="210" frameborder="0" allowtransparency="true" allow="encrypted-media"></iframe>
-    </div>
+      <div class="if-wrap">
+        <iframe  
+          width="100%" height="100%" 
+          title="LP#1: 'Sweet Jonny'" 
+          name="iframe-3" 
+          frameborder="0" allowfullscreen 
+          allow="encrypted-media" allowtransparency="true" 
+          style="
+          background-image:url('https://i.scdn.co/image/ab67616d00001e02e057b49da50769852b95fb67'); 
+          background-repeat: no-repeat; background-size: contain; background-position: center;
+        ">
+        </iframe>
+        <a title="Load Tracks" 
+          onclick="this.remove()" 
+          href="https://open.spotify.com/embed/album/41kmimSxstuPKSRB4lBq68" 
+          target="iframe-3">
+          <!-- SVG inline to allow interaction via CSS & <a> onclick -->
+          <svg height="100%" width="100%" 
+          version="2.0" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 495.545 495.545" x="0px" y="0px">
+            <path d="M268.234,20.467c-71.09,0-134.609,32.862-176.322,84.133c8.916,3.007,16.471,9.265,20.784,18.036
+            l26.005,52.576c25.484-45.305,73.959-76.027,129.533-76.027c81.937,0,148.601,66.647,148.601,148.583
+            c0,81.944-66.664,148.593-148.601,148.593c-72.776,0-133.376-52.624-146.021-121.801l31.078,20.954
+            c1.767,1.184,4.087,1.03,5.691-0.357c1.588-1.394,2.059-3.689,1.135-5.593c-51.83-104.772,0.338,0.706-75.646-152.969
+            c-0.779-1.589-2.399-2.602-4.185-2.602c-1.782,0-3.402,1.013-4.164,2.602c-3.615,7.288-59.938,121.226-75.631,152.969
+            c-0.956,1.904-0.486,4.199,1.119,5.593c1.589,1.386,3.906,1.541,5.674,0.357l34.969-23.565
+            c12.129,114.003,108.799,203.13,225.98,203.13c125.352,0,227.311-101.966,227.311-227.31
+            C495.545,122.433,393.586,20.467,268.234,20.467z"/>
+            <text x="30%" y="55%">Load</text>
+          </svg>
+        </a>
+      </div>
     </div>
     <br>
 
-    <p>Listen more here 
-      <span class="social-icons ml-2"><a href="https://open.spotify.com/artist/0ZYQubU5LJ8rn9RAnrPS7r" target="_blank" data-toggle="tooltip" title="Spotify" data-placement="auto" style="vertical-align: top;" ><img height="32" width="32" src="fonts/spotify.svg" alt="Spotify logo"/></a></span>
+    <p>Listen more  
+      <a href="https://open.spotify.com/artist/0ZYQubU5LJ8rn9RAnrPS7r" target="_blank" data-toggle="tooltip" title="Spotify" data-placement="auto" style="vertical-align: top;">Sweet Jonny</a>
       <iframe src="https://open.spotify.com/follow/1/?uri=spotify:artist:0ZYQubU5LJ8rn9RAnrPS7r&size=basic&theme=dark&show-count=0" width="100" height="30" scrolling="no" frameborder="0" style="border:none; overflow:hidden;vertical-align: top;" allowtransparency="true"></iframe>
     </p>
-  </div>
 	</section>
-
-  <!-- https://github.com/vb/lazyframe -->
-  <!-- <script src="lazyframe.min.js"></script>
-  <script>
-    lazyframe('.lazyframe');
-  </script> -->
 </body>
 </html>
